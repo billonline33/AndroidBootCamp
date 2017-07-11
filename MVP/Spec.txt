@@ -1,0 +1,10 @@
+
+GetServiceHistory
+http://10.50.192.50:1301/api/servicehistory/009/getpage?page=1&pagesize=20
+
+
+GetServiceHistoryDetails
+http://10.50.192.50:1301/api/servicehistorydetail/009/Getpage/130153
+http://10.50.192.50:1301/api/servicehistorydetail/009/Getpage/129989
+
+
