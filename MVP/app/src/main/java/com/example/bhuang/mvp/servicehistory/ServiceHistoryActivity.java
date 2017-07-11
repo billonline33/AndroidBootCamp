@@ -22,7 +22,14 @@ import com.example.bhuang.mvp.servicehistorydetails.ServiceHistoryDetailsActivit
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceHistoryActivity extends AppCompatActivity {
+public class ServiceHistoryActivity extends AppCompatActivity implements ServiceHistoryContract.View {
+
+
+    //MVP start
+    private ServiceHistoryContract.UserActionListener mActionListener;
+
+    //MVP end
+
 
     private ListView mListView;
     ServiceHistoryAdapter adapter;
@@ -33,14 +40,9 @@ public class ServiceHistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_service_history);
 
         IServiceHistoryRepository serviceHistoryRepository =new InMemoryServiceHistoryReposity();
-        final List<ServiceHistory> serviceHistories=serviceHistoryRepository.getServiceHistories();
-        adapter=new ServiceHistoryAdapter(this,R.layout.service_history_item_row,serviceHistories);
+        mActionListener=new ServiceHistoryPresenter(serviceHistoryRepository,this);
 
-        mListView=(ListView) findViewById(R.id.lstvwrServiceHistory);
-        mListView.setAdapter(adapter);
-
-        final String item;
-
+        /*
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -49,8 +51,6 @@ public class ServiceHistoryActivity extends AppCompatActivity {
                 ServiceHistory serviceHistory=(ServiceHistory)adapter.getItem(position);
 
                 List<ServiceHistoryDetails> serviceHistoryDetails = new ArrayList<ServiceHistoryDetails>();
-                serviceHistoryDetails =serviceHistory.getServiceHistoryDetailses();
-                //Load Service History Details Here
 
                 Intent intent=new Intent(ServiceHistoryActivity.this, ServiceHistoryDetailsActivity.class);
                 intent.putExtra("JobNumber",jobNumber);
@@ -58,29 +58,24 @@ public class ServiceHistoryActivity extends AppCompatActivity {
                 startActivityForResult(intent,11);
             }
         });
+        */
+    }
 
-        //setListView(serviceHistories);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mActionListener.loadServiceHistories();
     }
 
 
 
+    //MVP function
+    @Override
+    public void ShowServiceHistories(List<ServiceHistory> serviceHistories) {
+        ServiceHistoryAdapter adapter;
+        adapter=new ServiceHistoryAdapter(this, R.layout.service_history_item_row,serviceHistories);
 
-
-    private void setListView(List<ServiceHistory> serviceHistories)
-    {
-
-
-        String[] listItems=new String[serviceHistories.size()];
-
-        for (int i=0;i<serviceHistories.size();i++)
-        {
-            ServiceHistory serviceHistory=serviceHistories.get(i);
-            listItems[i]=serviceHistory.getJobNumber();
-        }
-
-        ArrayAdapter adapter=new ArrayAdapter(this,R.layout.service_history_item_row,R.id.tvJobNumber,listItems);
+        mListView=(ListView) findViewById(R.id.lstvwrServiceHistory);
         mListView.setAdapter(adapter);
-
     }
-
 }
