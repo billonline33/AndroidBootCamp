@@ -42,10 +42,11 @@ public class ServiceHistoryActivity extends AppCompatActivity implements Service
         IServiceHistoryRepository serviceHistoryRepository =new InMemoryServiceHistoryReposity();
         mActionListener=new ServiceHistoryPresenter(serviceHistoryRepository,this);
 
-        /*
+
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                /*
                 String jobNumber=(String)adapter.getItem(position).getJobNumber();
                 int iD=(int) adapter.getItem(position).getId();
                 ServiceHistory serviceHistory=(ServiceHistory)adapter.getItem(position);
@@ -56,9 +57,10 @@ public class ServiceHistoryActivity extends AppCompatActivity implements Service
                 intent.putExtra("JobNumber",jobNumber);
                 intent.putExtra("ID",iD);
                 startActivityForResult(intent,11);
+                */
             }
         });
-        */
+
     }
 
     @Override
@@ -77,5 +79,9 @@ public class ServiceHistoryActivity extends AppCompatActivity implements Service
 
         mListView=(ListView) findViewById(R.id.lstvwrServiceHistory);
         mListView.setAdapter(adapter);
+    }
+
+    @Override
+    public void ShowServiceHistoryDetails() {
     }
 }

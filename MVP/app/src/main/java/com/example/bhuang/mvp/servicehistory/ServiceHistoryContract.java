@@ -13,7 +13,7 @@ public interface ServiceHistoryContract {
     {
         void ShowServiceHistories(List<ServiceHistory> serviceHistories);
 
-
+        void ShowServiceHistoryDetails();
     }
     interface UserActionListener
     {
