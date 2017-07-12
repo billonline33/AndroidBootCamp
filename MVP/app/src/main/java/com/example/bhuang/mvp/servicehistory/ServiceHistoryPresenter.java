@@ -1,5 +1,6 @@
 package com.example.bhuang.mvp.servicehistory;
 
+import android.view.View;
 import android.widget.ListView;
 
 import com.example.bhuang.mvp.R;
@@ -31,7 +32,9 @@ public class ServiceHistoryPresenter implements ServiceHistoryContract.UserActio
     }
 
     @Override
-    public void openServiceHistoryDetails() {
+    public void openServiceHistoryDetails(View view, int position) {
+
+
 
     }
 }

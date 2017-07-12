@@ -1,5 +1,7 @@
 package com.example.bhuang.mvp.servicehistory;
 
+import android.support.annotation.NonNull;
+
 import com.example.bhuang.mvp.models.ServiceHistory;
 
 import java.util.List;
@@ -19,7 +21,7 @@ public interface ServiceHistoryContract {
     {
         void loadServiceHistories();
 
-        void openServiceHistoryDetails();
+        void openServiceHistoryDetails(android.view.View view, int position);
 
     }
 

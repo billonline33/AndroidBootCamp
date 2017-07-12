@@ -27,9 +27,9 @@ public class ServiceHistoryAdapter extends ArrayAdapter<ServiceHistory> {
 
     public ServiceHistoryAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<ServiceHistory> serviceHistories) {
         super(context, resource, serviceHistories);
-
         this.serviceHistories=serviceHistories;
     }
+
 
     @NonNull
     @Override
@@ -49,4 +49,6 @@ public class ServiceHistoryAdapter extends ArrayAdapter<ServiceHistory> {
         return convertView;
 
     }
+
+
 }
