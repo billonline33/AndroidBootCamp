@@ -38,6 +38,11 @@ public class ServiceHistoryRecycleViewAdapter extends RecyclerView.Adapter<Servi
         public TextView txtMechanicName;
         public TextView txtJobNumber;
         public TextView txtServiceDate;
+        public TextView txtEquipmentNumber;
+        public TextView txtHourMeter;
+        public TextView txtJobCategoty;
+        public TextView txtNote;
+
 
         public ViewHolder(View v)
         {
@@ -46,12 +51,17 @@ public class ServiceHistoryRecycleViewAdapter extends RecyclerView.Adapter<Servi
             txtMechanicName=(TextView)v.findViewById(R.id.tvMechanicName);
             txtJobNumber=(TextView)v.findViewById(R.id.tvJobNumber);
             txtServiceDate=(TextView)v.findViewById(R.id.tvServiceDate);
+            txtEquipmentNumber=(TextView)v.findViewById(R.id.tvEquipmentNumber);
+            txtHourMeter=(TextView)v.findViewById(R.id.tvHourMeter);
+            txtJobCategoty=(TextView)v.findViewById(R.id.tvJobCategory);
+            txtNote=(TextView)v.findViewById(R.id.tvNote);
+
         }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mServiceHistories.size();
     }
 
     @Override
@@ -70,6 +80,10 @@ public class ServiceHistoryRecycleViewAdapter extends RecyclerView.Adapter<Servi
         holder.txtID.setText(String.valueOf(serviceHistory.getId())=="null"?"":String.valueOf(serviceHistory.getId()));
         holder.txtMechanicName.setText(serviceHistory.getMechanicName()=="null"?"":serviceHistory.getMechanicName());
         holder.txtJobNumber.setText(serviceHistory.getJobNumber()=="null"?"":serviceHistory.getJobNumber());
+        holder.txtEquipmentNumber.setText(serviceHistory.getEquipmentNumber()=="null"?"":serviceHistory.getEquipmentNumber());
+        holder.txtHourMeter.setText(String.valueOf(serviceHistory.getHourMeter()));
+        holder.txtJobCategoty.setText(serviceHistory.getJobCategory()=="null"?"":serviceHistory.getJobCategory());
+        holder.txtNote.setText(serviceHistory.getNote()=="null"?"":serviceHistory.getNote());
     }
 
 }
