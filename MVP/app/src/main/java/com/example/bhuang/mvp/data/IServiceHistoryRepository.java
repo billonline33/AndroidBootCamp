@@ -2,6 +2,7 @@ package com.example.bhuang.mvp.data;
 
 import com.example.bhuang.mvp.models.ServiceHistory;
 import com.example.bhuang.mvp.models.ServiceHistoryDetails;
+import com.example.bhuang.mvp.models.User;
 
 import java.util.List;
 
@@ -17,4 +18,5 @@ public interface IServiceHistoryRepository {
 
     List<ServiceHistoryDetails> getServiceHistoryDetails(int serviceHistoryId);
 
+    List<User> getUsers();
 }

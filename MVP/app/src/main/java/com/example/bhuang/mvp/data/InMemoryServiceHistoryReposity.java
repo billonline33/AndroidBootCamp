@@ -2,6 +2,7 @@ package com.example.bhuang.mvp.data;
 
 import com.example.bhuang.mvp.models.ServiceHistory;
 import com.example.bhuang.mvp.models.ServiceHistoryDetails;
+import com.example.bhuang.mvp.models.User;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -76,6 +77,18 @@ public class InMemoryServiceHistoryReposity implements IServiceHistoryRepository
         serviceHistoryDetailses.add(new ServiceHistoryDetails("003","004 Desc",4,121,101));
 
         return serviceHistoryDetailses;
+    }
 
+    @Override
+    public List<User> getUsers() {
+        List<User> lstUser=new ArrayList<>();
+        lstUser.add(new User("Bill","Huang","Open",true));
+        lstUser.add(new User("Alan","Huang","Closed",true));
+        lstUser.add(new User("Oliver","Huang","New",false));
+        lstUser.add(new User("Jessica","Wang","Open",true));
+        lstUser.add(new User("Katie","Huang","Open",true));
+        lstUser.add(new User("Julian","Huang","Open",true));
+
+        return lstUser;
     }
 }

@@ -35,7 +35,6 @@ public class ServiceHistoryRecycleViewAdapter extends RecyclerView.Adapter<Servi
     private void setList(List<ServiceHistory> serviceHistories)
     {
         mServiceHistories=serviceHistories;
-
     }
 
 
