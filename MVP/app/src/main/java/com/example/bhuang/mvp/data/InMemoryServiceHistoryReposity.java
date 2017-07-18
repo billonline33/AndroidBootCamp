@@ -65,4 +65,17 @@ public class InMemoryServiceHistoryReposity implements IServiceHistoryRepository
 
         return serviceHistory;
     }
+
+    @Override
+    public List<ServiceHistoryDetails> getServiceHistoryDetails(int serviceHistoryId) {
+
+        List<ServiceHistoryDetails> serviceHistoryDetailses=new ArrayList<>();
+        serviceHistoryDetailses.add(new ServiceHistoryDetails("001","001 Desc",1,12,10));
+        serviceHistoryDetailses.add(new ServiceHistoryDetails("002","002 Desc",2,15,1100));
+        serviceHistoryDetailses.add(new ServiceHistoryDetails("003","003 Desc",3,112,110));
+        serviceHistoryDetailses.add(new ServiceHistoryDetails("003","004 Desc",4,121,101));
+
+        return serviceHistoryDetailses;
+
+    }
 }

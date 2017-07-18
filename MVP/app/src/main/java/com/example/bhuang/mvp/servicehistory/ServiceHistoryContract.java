@@ -15,13 +15,13 @@ public interface ServiceHistoryContract {
     {
         void ShowServiceHistories(List<ServiceHistory> serviceHistories);
 
-        void ShowServiceHistoryDetails();
+        void ShowServiceHistoryDetailsUI(int serviceHistoryId);
     }
     interface UserActionListener
     {
         void loadServiceHistories();
 
-        void openServiceHistoryDetails(android.view.View view, int position);
+        void openServiceHistoryDetails(ServiceHistory clickedItem);
 
     }
 

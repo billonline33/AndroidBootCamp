@@ -2,4 +2,8 @@
     <string name="app_name">MVP</string>
     <string name="title_activity_service_history">ServiceHistoryActivity</string>
     <string name="title_activity_service_history_details">serviceHistoryDetailsActivity</string>
+    <string name="line_code">Line Code</string>
+    <string name="line_description">Line Description</string>
+    <string name="line_qty">Line Qty</string>
+    <string name="line_type">Line Type</string>
 </resources>

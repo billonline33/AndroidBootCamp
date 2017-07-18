@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView android:id="@+id/textViewLineCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_code"
+            android:layout_marginRight="20dp"
+            />
+        <TextView android:id="@+id/tvLineCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/textViewLineDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_description"
+            android:layout_marginRight="20dp"/>
+        <TextView android:id="@+id/tvLineDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/textViewLineQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_qty"
+            android:layout_marginRight="20dp"/>
+        <TextView android:id="@+id/tvLineQry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/textViewLineType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_type"
+            android:layout_marginRight="20dp"/>
+
+        <TextView android:id="@+id/tvLineType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

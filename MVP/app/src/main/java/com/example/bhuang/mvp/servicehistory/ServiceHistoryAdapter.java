@@ -11,14 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.bhuang.mvp.R;
-import com.example.bhuang.mvp.data.IServiceHistoryRepository;
-import com.example.bhuang.mvp.data.InMemoryServiceHistoryReposity;
 import com.example.bhuang.mvp.models.ServiceHistory;
 
 import java.util.List;
 
 /**
  * Created by bhuang on 6/28/2017.
+ * This is for ListView, for Recycle view, see ServiceHistoryRecycleViewAdapter
  */
 
 public class ServiceHistoryAdapter extends ArrayAdapter<ServiceHistory> {
@@ -37,7 +36,6 @@ public class ServiceHistoryAdapter extends ArrayAdapter<ServiceHistory> {
         LayoutInflater inflater=(LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView=inflater.inflate(R.layout.service_history_item_row,null);
 
-
         ServiceHistory serviceHistory=serviceHistories.get(position);
 
         TextView tvId = (TextView) convertView.findViewById(R.id.tvServiceHistoryId);
@@ -47,8 +45,5 @@ public class ServiceHistoryAdapter extends ArrayAdapter<ServiceHistory> {
         tvJobNumber.setText(serviceHistory.getJobNumber()=="null"?"":serviceHistory.getJobNumber());
 
         return convertView;
-
     }
-
-
 }

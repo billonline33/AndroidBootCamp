@@ -1,11 +1,6 @@
 package com.example.bhuang.mvp.servicehistory;
 
-import android.view.View;
-import android.widget.ListView;
-
-import com.example.bhuang.mvp.R;
 import com.example.bhuang.mvp.data.IServiceHistoryRepository;
-import com.example.bhuang.mvp.data.InMemoryServiceHistoryReposity;
 import com.example.bhuang.mvp.models.ServiceHistory;
 
 import java.util.List;
@@ -32,9 +27,8 @@ public class ServiceHistoryPresenter implements ServiceHistoryContract.UserActio
     }
 
     @Override
-    public void openServiceHistoryDetails(View view, int position) {
-
-
-
+    public void openServiceHistoryDetails(ServiceHistory clickedItem) {
+        //call View to Display the Model data. This is implemented in Activity (View).
+        mView.ShowServiceHistoryDetailsUI(clickedItem.getId());
     }
 }
