@@ -3,6 +3,9 @@
         <variable
             name="user"
             type="com.example.bhuang.mvp.models.User" />
+        <variable
+            name="viewModel"
+            type="com.example.bhuang.mvp.user.ProfileViewModel" />
     </data>
 
     <RelativeLayout
@@ -27,5 +30,20 @@
             android:padding="30dp"
             />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{user.photo}"
+            />
+        <!--
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add as Friend"
+            android:visibility="@{viewModel.isFriend}"
+            android:onClick="@{viewModel.changeFriendshipStatus}"
+
+            />
+         -->
     </RelativeLayout>
 </layout>

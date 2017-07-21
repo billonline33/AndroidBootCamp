@@ -9,6 +9,7 @@ import com.example.bhuang.mvp.data.IServiceHistoryRepository;
 import com.example.bhuang.mvp.data.InMemoryServiceHistoryReposity;
 import com.example.bhuang.mvp.databinding.ActivityUserBinding;
 
+
 public class UserActivity extends AppCompatActivity {
 
     @Override

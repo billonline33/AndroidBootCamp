@@ -6,6 +6,39 @@ package com.example.bhuang.mvp.models;
 
 public class User {
     private String firstname;
+    private String surname;
+    private String status;
+    private boolean isOnline;
+    private String photo;
+    private boolean isFriend;
+
+    public User(String firstname, String surname, String status, boolean isOnline, String photo, boolean isFriend) {
+        this.firstname = firstname;
+        this.surname = surname;
+        this.status = status;
+        this.isOnline = isOnline;
+        this.photo = photo;
+        this.isFriend = isFriend;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public boolean isFriend() {
+        return isFriend;
+    }
+
+    public void setFriend(boolean friend) {
+        isFriend = friend;
+    }
+
+
+
 
     public User(String firstname, String surname, String status, boolean isOnline) {
         this.firstname = firstname;
@@ -46,7 +79,5 @@ public class User {
         isOnline = online;
     }
 
-    private String surname;
-    private String status;
-    private boolean isOnline;
+
 }

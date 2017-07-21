@@ -1,5 +1,6 @@
 package com.example.bhuang.mvp.data;
 
+import com.example.bhuang.mvp.Temperature.TemperatureData;
 import com.example.bhuang.mvp.models.ServiceHistory;
 import com.example.bhuang.mvp.models.ServiceHistoryDetails;
 import com.example.bhuang.mvp.models.User;
@@ -90,5 +91,15 @@ public class InMemoryServiceHistoryReposity implements IServiceHistoryRepository
         lstUser.add(new User("Julian","Huang","Open",true));
 
         return lstUser;
+    }
+
+    @Override
+    public TemperatureData loadTemperatureData() {
+        return new TemperatureData("Sydney","38.9");
+    }
+
+    @Override
+    public TemperatureData loadTemperatureDataAgain() {
+        return new TemperatureData("Melbourne","100.9");
     }
 }

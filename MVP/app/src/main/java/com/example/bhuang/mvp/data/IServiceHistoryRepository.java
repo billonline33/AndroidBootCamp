@@ -1,5 +1,6 @@
 package com.example.bhuang.mvp.data;
 
+import com.example.bhuang.mvp.Temperature.TemperatureData;
 import com.example.bhuang.mvp.models.ServiceHistory;
 import com.example.bhuang.mvp.models.ServiceHistoryDetails;
 import com.example.bhuang.mvp.models.User;
@@ -19,4 +20,8 @@ public interface IServiceHistoryRepository {
     List<ServiceHistoryDetails> getServiceHistoryDetails(int serviceHistoryId);
 
     List<User> getUsers();
+
+    TemperatureData loadTemperatureData();
+
+    TemperatureData loadTemperatureDataAgain();
 }
