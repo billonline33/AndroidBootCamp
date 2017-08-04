@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/navMenu1"
+        android:title="Menu 1"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_message_black_24dp"
+        />
+    <item android:id="@+id/navMenu2"
+        android:title="Menu 2"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    <item android:id="@+id/navMenu3"
+        android:title="Menu 3"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+</menu>
